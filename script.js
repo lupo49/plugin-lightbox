@@ -36,8 +36,8 @@
 
 // If you would like to use a custom loading image or close button reference them in the next two lines.
 // DOKU_BASE should be available here
-var loadingImage = '/wiki/lib/plugins/lightbox/loading.gif';
-var closeButton = '/wiki/lib/plugins/lightbox/close.gif';
+var loadingImage = DOKU_BASE.concat('lib/plugins/lightbox/loading.gif');
+var closeButton = DOKU_BASE.concat('lib/plugins/lightbox/close.gif');
 
 
 //
@@ -414,5 +414,6 @@ function initLightbox()
 
 }
 
-
-addInitEvent(function() {initLightbox();});
+jQuery(function(){
+    initLightbox();
+});

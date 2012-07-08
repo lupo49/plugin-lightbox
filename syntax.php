@@ -99,11 +99,11 @@ class syntax_plugin_lightbox extends DokuWiki_Syntax_Plugin {
         //$renderer->doc .= "<!-- $src -->";
 
         if (! preg_match('/^https?:/', $src)) {
-          $src = "/wiki/lib/exe/fetch.php?media=$src";
+          $src = DOKU_BASE . "lib/exe/fetch.php?media=$src";
         }
 
         // Sized display
-        $renderer->doc .= "<a href=\"$src\" rel=\"lightbox\"><img src=\"$src\" class=\"media\" width=$width height=$height alt=\"$title\" title=\"$title\" /></a>";
+        $renderer->doc .= "<a href=\"$src\" rel=\"lightbox\"><img src=\"$src\" class=\"media\" width=\"$width\" height=\"$height\" alt=\"$title\" title=\"$title\" /></a>";
 
         //$renderer->doc .= "<div style=\"margin: 3px;border: 1px solid grey;display: inline-block; overflow: hidden; width: ${width}px; height: ${height}px\"><a href=\"$src\" rel=\"lightbox\"><img src=\"$src\" class=\"media\" alt=\"$title\" title=\"$title\" /></a></div>";
         return true;
