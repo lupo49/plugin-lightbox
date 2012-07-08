@@ -1,0 +1,9 @@
+base   lightbox
+author Dustin Butler
+email  dustin@intrcomm.net
+date   2010-11-22
+name   Lightbox For Images
+desc   Implements lightbox js for image media that uses {{images:image.png}} and similar
+url    http://www.roundporch.com/wiki/doku.php?id=dokuwiki:lightbox 
+
+
