@@ -60,7 +60,7 @@ class syntax_plugin_lightbox extends DokuWiki_Syntax_Plugin {
     /**
      * Handle the match
      */
-    function handle($match, $state, $pos, &$handler){
+    function handle($match, $state, $pos, Doku_Handler $handler){
 
       if ($state != DOKU_LEXER_SPECIAL) return array();
       // $match will equal our full matching pattern, need to pull the image and size out
@@ -92,7 +92,7 @@ class syntax_plugin_lightbox extends DokuWiki_Syntax_Plugin {
     /**
      * Create output
      */
-    function render($mode, &$renderer, $data) {
+    function render($mode, Doku_Renderer $renderer, $data) {
       if ($mode == 'xhtml' or $mode == 'htmldoc') {
         list($all, $src, $width, $height, $title) = $data;
 
